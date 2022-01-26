@@ -9,6 +9,6 @@ exports.getAllData = async (req, res) => {
   res.send({
     tags,
     mealTypes,
-    foods: data,
+    mealsg: data,
   })
 }
