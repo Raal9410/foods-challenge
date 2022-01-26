@@ -25,7 +25,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.disable('etag')
 
-app.use('/', indexRoute)
+app.use('/foods', indexRoute)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
