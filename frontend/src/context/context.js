@@ -9,4 +9,8 @@ const useAPI = () => {
     tags: [],
     mealTypes: [],
   })
+
+  const fetchData = async(mealType, tags) => {
+    
+  }
 }
