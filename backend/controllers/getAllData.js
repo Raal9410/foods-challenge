@@ -25,11 +25,9 @@ exports.getAllData = async (req, res) => {
     }
   })
 
-  console.log(filteredMeals)
-
   res.send({
     tags,
     mealTypes,
-    mealsg: data,
+    meals: data,
   })
 }
