@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TagsCheckBoxes = ({ tags, handleSelectedTags }) => {
+const TagsCheckBoxes = ({ mealTypes, handleSelectedTags }) => {
   return (
     <div>
       {tags.map(tag => (

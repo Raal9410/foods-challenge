@@ -7,6 +7,7 @@ const Dashboard = () => {
   const { meals, tags, mealTypes, fetchData } = useContext(Context)
 
   const [selectedTags, setSelectedTags] = useState([])
+  const [selectedMealType, setSelectedMealType] = useState('')
 
   useEffect(() => {
     fetchData()
@@ -20,12 +21,17 @@ const Dashboard = () => {
     }
   }
 
-  console.log(selectedTags)
+  const handleSelectedMealType = e => {
+    if(e.target.checked){
+      setSelectedMealType(e.target.value)
+    } else {
+      setSelectedMealType('')
+    }
+  }
 
+  console.log(selectedMealType)
 
-  return (
-    <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags}/>
-  )
+  return <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags} />
 }
 
 export default Dashboard
