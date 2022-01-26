@@ -23,7 +23,7 @@ const Dashboard = () => {
   }
 
   const handleSelectedMealType = e => {
-    if(e.target.checked){
+    if (e.target.checked) {
       setSelectedMealType(e.target.value)
     } else {
       setSelectedMealType('')
@@ -33,10 +33,15 @@ const Dashboard = () => {
   console.log(selectedMealType)
 
   return (
-  <>
-  <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags} />)
-  <MealTypeCheckboxes mealTypes={mealTypes} handleSelectedMealType={handleSelectedMealType} />
-  </>
+    <>
+      <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags} />
+      <MealTypeCheckboxes
+        mealTypes={mealTypes}
+        handleSelectedMealType={handleSelectedMealType}
+        selectedMealType={selectedMealType}
+      />
+    </>
+  )
 }
 
 export default Dashboard
