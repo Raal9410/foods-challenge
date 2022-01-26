@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TagsCheckBoxes = ({ tags }) => {
+const TagsCheckBoxes = ({ tags, setSelectedTags }) => {
 
   return (
     <div>
