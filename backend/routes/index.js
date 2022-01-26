@@ -1,4 +1,5 @@
 const router = require('express').Router()
+import { convertCSVToJSON } from '../utils/getFormattedData'
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
