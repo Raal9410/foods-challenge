@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import { Context } from '../context/context'
 
+import TagsCheckBoxes from './TagsChekboxes/index.js'
+
 const Dashboard = () => {
   const { meals, tags, mealTypes, fetchData } = useContext(Context)
 
@@ -8,10 +10,10 @@ const Dashboard = () => {
     fetchData()
   }, [])
 
-  console.log(meals)
-  console.log(tags)
-  console.log(mealTypes)
-  return <p>Meals App</p>
+
+  return (
+    <TagsCheckBoxes tags={tags}/>
+  )
 }
 
 export default Dashboard
