@@ -8,9 +8,12 @@ const App = () => {
 }
 
 const AppRouter = () => {
+  const data = useApi()
   return (
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Context.Provider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Context.Provider>
   )
 }
