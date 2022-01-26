@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const router = require('express').Router()
+const { convertCSVToJSON } = require('../utils/getFormattedData')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/',  async function (req, res, next) {
+  const foods = await convertCSVToJSON('meals.csv')
+  console.log(foods)
+})
 
-module.exports = router;
+module.exports = router
