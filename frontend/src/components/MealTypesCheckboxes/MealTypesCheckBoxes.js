@@ -1,16 +1,16 @@
 import React from 'react'
 
-const TagsCheckBoxes = ({ mealTypes, handleSelectedTags }) => {
+const MealTypeCheckboxes = ({ mealTypes, handleSelectedTags }) => {
   return (
     <div>
-      {tags.map(tag => (
-        <div key={tag}>
-          <label>{tag}</label>
-          <input type="checkbox" value={tag} onChange={e => handleSelectedTags(e)}/>
+      {mealTypes.map(e => (
+        <div key={e}>
+          <label>{e}</label>
+          <input type="checkbox" value={e} name={e}  />
         </div>
       ))}
     </div>
   )
 }
 
-export default TagsCheckBoxes
+export default MealTypeCheckboxes

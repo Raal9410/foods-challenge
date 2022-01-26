@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import { Context } from '../context/context'
 
 import TagsCheckBoxes from './TagsCheckboxes/index.js'
+import MealTypeCheckboxes from './MealTypesCheckboxes'
 
 const Dashboard = () => {
   const { meals, tags, mealTypes, fetchData } = useContext(Context)
@@ -31,7 +32,11 @@ const Dashboard = () => {
 
   console.log(selectedMealType)
 
-  return <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags} />
+  return (
+  <>
+  <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags} />)
+  <MealTypeCheckboxes mealTypes={mealTypes} handleSelectedMealType={handleSelectedMealType} />
+  </>
 }
 
 export default Dashboard
