@@ -28,6 +28,6 @@ exports.getAllData = async (req, res) => {
   res.send({
     tags,
     mealTypes,
-    meals: data,
+    meals: filteredMeals,
   })
 }
