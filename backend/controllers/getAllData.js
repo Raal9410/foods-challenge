@@ -5,5 +5,10 @@ exports.getAllData = async (req, res) => {
 
   const tags = [...new Set([].concat(...data.map(e => e.tags)))] 
   const mealTypes = [...new Set([].concat(...data.map(e => e.mealType)))]
-  console.log(mealTypes)
+
+  res.send({
+    tags,
+    mealTypes,
+    foods: data,
+  })
 }
