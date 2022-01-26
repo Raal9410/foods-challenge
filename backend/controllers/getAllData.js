@@ -15,10 +15,10 @@ exports.getAllData = async (req, res) => {
       return mealType === selectedMealType
     }
     if (!selectedMealType && selectedTags) {
-      return tags.some(tag => selectedTags.indexOf(tag) >= 0)
+      return tags.every(tag => selectedTags.indexOf(tag) >= 0)
     }
     if (selectedMealType && selectedTags) {
-      return mealType === selectedMealType && tags.some(tag => selectedTags.indexOf(tag) >= 0)
+      return mealType === selectedMealType && tags.every(tag => selectedTags.indexOf(tag) >= 0)
     }
     else {
       return data
