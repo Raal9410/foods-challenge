@@ -20,6 +20,9 @@ exports.getAllData = async (req, res) => {
     if (selectedMealType && selectedTags) {
       return mealType === selectedMealType && tags.some(tag => selectedTags.indexOf(tag) >= 0)
     }
+    else {
+      return data
+    }
   })
 
   console.log(filteredMeals)
