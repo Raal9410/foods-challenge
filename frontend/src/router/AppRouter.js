@@ -10,10 +10,12 @@ const App = () => {
 const AppRouter = () => {
   const data = useApi()
   return (
-    <Context.Provider>
+    <Context.Provider value={data}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </Context.Provider>
   )
 }
+
+export default AppRouter
