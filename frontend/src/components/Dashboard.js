@@ -11,8 +11,8 @@ const Dashboard = () => {
   const [selectedMealType, setSelectedMealType] = useState('')
 
   useEffect(() => {
-    fetchData()
-  }, [])
+    fetchData(selectedMealType, selectedTags)
+  }, [selectedMealType, selectedTags])
 
   const handleSelectedTags = e => {
     if (e.target.checked) {
@@ -30,7 +30,7 @@ const Dashboard = () => {
     }
   }
 
-  console.log(selectedMealType)
+  console.log(meals)
 
   return (
     <>
