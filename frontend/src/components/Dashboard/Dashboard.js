@@ -37,12 +37,18 @@ const Dashboard = () => {
   return (
     <>
       <FiltersContainer>
-        <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags} />
-        <MealTypeCheckboxes
-          mealTypes={mealTypes}
-          handleSelectedMealType={handleSelectedMealType}
-          selectedMealType={selectedMealType}
-        />
+        <div>
+          <b>Filter by tags:</b>
+          <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags} />
+        </div>
+        <div>
+          <b>Filter by meal type:</b>
+          <MealTypeCheckboxes
+            mealTypes={mealTypes}
+            handleSelectedMealType={handleSelectedMealType}
+            selectedMealType={selectedMealType}
+          />
+        </div>
       </FiltersContainer>
       <MealsGrid>
         {meals.length > 0
