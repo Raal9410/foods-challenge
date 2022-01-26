@@ -21,7 +21,7 @@ exports.getAllData = async (req, res) => {
             return selectedTags.split(',').every(tag => tags.includes(tag))
           }
           if (selectedMealType && selectedTags) {
-            return mealType === selectedMealType && selectedTags.split(',').every(tag => tag.includes(tag))
+            return mealType === selectedMealType && selectedTags.split(',').every(tag => tags.includes(tag))
           }
         })
 
