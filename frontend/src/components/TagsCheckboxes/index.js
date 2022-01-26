@@ -1,3 +1,3 @@
-import TagsCheckBoxes from "./TagsCheckboxes";
+import TagsCheckBoxes from './TagsCheckboxes'
 
 export default TagsCheckBoxes

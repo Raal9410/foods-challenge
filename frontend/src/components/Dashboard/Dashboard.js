@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { Context } from '../context/context'
+import { Context } from '../../context/context'
 
-import TagsCheckBoxes from './TagsCheckboxes/index.js'
-import MealTypeCheckboxes from './MealTypesCheckboxes'
-import SingleMeal from './SingleMeal'
+import TagsCheckBoxes from '../TagsCheckboxes/index.js'
+import MealTypeCheckboxes from '../MealTypesCheckboxes'
+import SingleMeal from '../SingleMeal'
 
 const Dashboard = () => {
   const { meals, tags, mealTypes, fetchData } = useContext(Context)
@@ -13,6 +13,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchData(selectedMealType, selectedTags)
+    // eslint-disable-next-line
   }, [selectedMealType, selectedTags])
 
   const handleSelectedTags = e => {
@@ -30,8 +31,6 @@ const Dashboard = () => {
       setSelectedMealType('')
     }
   }
-
-  console.log(meals)
 
   return (
     <>

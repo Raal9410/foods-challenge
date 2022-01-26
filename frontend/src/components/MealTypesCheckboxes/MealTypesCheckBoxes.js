@@ -6,7 +6,13 @@ const MealTypeCheckboxes = ({ mealTypes, handleSelectedMealType, selectedMealTyp
       {mealTypes.map(e => (
         <div key={e}>
           <label>{e}</label>
-          <input type="checkbox" value={e} name={e} checked={selectedMealType === e} onChange={e => handleSelectedMealType(e)}/>
+          <input
+            type="checkbox"
+            value={e}
+            name={e}
+            checked={selectedMealType === e}
+            onChange={e => handleSelectedMealType(e)}
+          />
         </div>
       ))}
     </div>

@@ -1,3 +1,3 @@
-import MealTypeCheckboxes from "./MealTypesCheckBoxes";
+import MealTypeCheckboxes from './MealTypesCheckBoxes'
 
 export default MealTypeCheckboxes

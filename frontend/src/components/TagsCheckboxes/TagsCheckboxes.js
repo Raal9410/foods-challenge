@@ -6,7 +6,7 @@ const TagsCheckBoxes = ({ tags, handleSelectedTags }) => {
       {tags.map(tag => (
         <div key={tag}>
           <label>{tag}</label>
-          <input type="checkbox" value={tag} onChange={e => handleSelectedTags(e)}/>
+          <input type="checkbox" value={tag} onChange={e => handleSelectedTags(e)} />
         </div>
       ))}
     </div>
