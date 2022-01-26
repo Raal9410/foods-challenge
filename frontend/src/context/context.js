@@ -11,6 +11,9 @@ const useAPI = () => {
   })
 
   const fetchData = async(mealType, tags) => {
-    
+    setState(prevState => ({
+      ...prevState,
+      loading: true,
+    }))
   }
 }
