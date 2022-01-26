@@ -11,9 +11,12 @@ exports.getAllData = async (req, res) => {
   const filteredMeals = data.filter(meal => {
     const { mealType, tags } = meal
 
-    console.log(mealType)
-    console.log(tags)
+    if (selectedMealType && !selectedTags) {
+      return mealType === selectedMealType
+    }
   })
+
+  console.log(filteredMeals)
 
   res.send({
     tags,
