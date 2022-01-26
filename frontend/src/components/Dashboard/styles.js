@@ -11,4 +11,14 @@ const MealsGrid = styled.div`
   padding-left: 1rem;
 `
 
-export { MealsGrid }
+const FiltersContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+`
+
+export { MealsGrid, FiltersContainer }
