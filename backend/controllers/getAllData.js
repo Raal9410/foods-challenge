@@ -8,21 +8,22 @@ exports.getAllData = async (req, res) => {
   const tags = [...new Set([].concat(...data.map(e => e.tags)))]
   const mealTypes = [...new Set([].concat(...data.map(e => e.mealType)))]
 
-  const filteredMeals = !selectedMealType && !selectedTags ? data : data.filter(meal => {
-    const { mealType, tags } = meal
+  const filteredMeals =
+    !selectedMealType && !selectedTags
+      ? data
+      : data.filter(meal => {
+          const { mealType, tags } = meal
 
-    if (selectedMealType && !selectedTags) {
-      return mealType === selectedMealType
-    }
-    if (!selectedMealType && selectedTags) {
-      return tags.every(tag => selectedTags.indexOf(tag) >= 0)
-    }
-    if (selectedMealType && selectedTags) {
-      return mealType === selectedMealType && tags.every(tag => selectedTags.indexOf(tag) >= 0)
-    }
-  })
-
-  console.log(filteredMeals)
+          if (selectedMealType && !selectedTags) {
+            return mealType === selectedMealType
+          }
+          if (!selectedMealType && selectedTags) {
+            return tags.every(tag => selectedTags.indexOf(tag) >= 0)
+          }
+          if (selectedMealType && selectedTags) {
+            return mealType === selectedMealType && tags.every(tag => selectedTags.indexOf(tag) >= 0)
+          }
+        })
 
   res.send({
     tags,
