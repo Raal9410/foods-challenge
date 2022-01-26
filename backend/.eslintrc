@@ -1,0 +1,32 @@
+{
+  "parser": "esprima",
+  "plugins": [ "prettier"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "printWidth": 120
+      }
+    ],
+    "arrow-parens": [1, "as-needed"],
+    "import/no-extraneous-dependencies": "off",
+    "max-len": "off",
+    "object-curly-newline": "off",
+    "no-underscore-dangle": "off",
+    "dot-notation": "off",
+    "comma-dangle": "off",
+    "camelcase": "warn",
+    "no-param-reassign": "warn",
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
+    "no-shadow": "off",
+    "no-undef": "error"
+  },
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true
+  }
+}
