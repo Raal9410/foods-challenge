@@ -16,7 +16,7 @@ const useAPI = () => {
       loading: true,
     }))
 
-    const response = await API.get(`/?mealType=${mealType}&tags=${tags.join(',')}`)
+    const response = await API.get(`/?mealType=${mealType ? mealType : ''}&tags=${tags ? tags.join(',') : ''}`)
 
     setState(prevState => ({
       ...prevState,
