@@ -18,10 +18,10 @@ exports.getAllData = async (req, res) => {
             return mealType === selectedMealType
           }
           if (!selectedMealType && selectedTags) {
-            return tags.every(tag => selectedTags.indexOf(tag) >= 0)
+            return selectedTags.split(',').every(tag => tags.includes(tag))
           }
           if (selectedMealType && selectedTags) {
-            return mealType === selectedMealType && tags.every(tag => selectedTags.indexOf(tag) >= 0)
+            return mealType === selectedMealType && selectedTags.split(',').every(tag => tag.includes(tag))
           }
         })
 
