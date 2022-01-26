@@ -3,6 +3,7 @@ import { Context } from '../context/context'
 
 import TagsCheckBoxes from './TagsCheckboxes/index.js'
 import MealTypeCheckboxes from './MealTypesCheckboxes'
+import SingleMeal from './SingleMeal'
 
 const Dashboard = () => {
   const { meals, tags, mealTypes, fetchData } = useContext(Context)
@@ -40,6 +41,9 @@ const Dashboard = () => {
         handleSelectedMealType={handleSelectedMealType}
         selectedMealType={selectedMealType}
       />
+      {meals.length > 0
+        ? meals.map(meal => <SingleMeal key={meal.id} meal={meal} />)
+        : 'We could not found a meal that adjusts to your search, we are working on adding more meals!'}
     </>
   )
 }
