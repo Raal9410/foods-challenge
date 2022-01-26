@@ -1,9 +1,10 @@
 const router = require('express').Router()
-import { convertCSVToJSON } from '../utils/getFormattedData'
+const { convertCSVToJSON } = require('../utils/getFormattedData')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' })
+  const foods = await convertCSVToJSON('meals.csv')
+  console.log(foods)
 })
 
 module.exports = router
