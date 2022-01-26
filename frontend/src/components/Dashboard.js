@@ -12,11 +12,19 @@ const Dashboard = () => {
     fetchData()
   }, [])
 
+  const handleSelectedTags = e => {
+    if (e.target.checked) {
+      setSelectedTags([...selectedTags, e.target.value])
+    } else {
+      setSelectedTags([...selectedTags.filter(tag => tag !== e.target.value)])
+    }
+  }
+
   console.log(selectedTags)
 
 
   return (
-    <TagsCheckBoxes tags={tags} setSelectedTags={setSelectedTags}/>
+    <TagsCheckBoxes tags={tags} handleSelectedTags={handleSelectedTags}/>
   )
 }
 
