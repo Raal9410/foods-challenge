@@ -4,7 +4,9 @@ const Meal = styled.div`
   width: auto;
   height: auto;
   max-width: 20rem;
+  border: 1px solid black;
   word-wrap: break-word;
+  padding: 0.5rem;
   img {
     width: 20rem;
     height: auto;

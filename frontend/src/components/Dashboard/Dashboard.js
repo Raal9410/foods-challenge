@@ -5,6 +5,8 @@ import TagsCheckBoxes from '../TagsCheckboxes/index.js'
 import MealTypeCheckboxes from '../MealTypesCheckboxes'
 import SingleMeal from '../SingleMeal'
 
+import { MealsGrid } from './styles'
+
 const Dashboard = () => {
   const { meals, tags, mealTypes, fetchData } = useContext(Context)
 
@@ -40,9 +42,11 @@ const Dashboard = () => {
         handleSelectedMealType={handleSelectedMealType}
         selectedMealType={selectedMealType}
       />
-      {meals.length > 0
-        ? meals.map(meal => <SingleMeal key={meal.id} meal={meal} />)
-        : 'We could not found a meal that adjusts to your search, we are working on adding more meals!'}
+      <MealsGrid>
+        {meals.length > 0
+          ? meals.map(meal => <SingleMeal key={meal.id} meal={meal} />)
+          : 'We could not found a meal that adjusts to your search, we are working on adding more meals!'}
+      </MealsGrid>
     </>
   )
 }
